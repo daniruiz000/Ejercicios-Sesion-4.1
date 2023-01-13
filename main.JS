@@ -12,15 +12,15 @@ function noVowels(str){
     let vowels = "aeiouAEIOU";               // Declaramos una variable con las vocales que queremos quitar.
     let resultado = "";                      // Declaramos una variable vacia que será nuestra cadena de string.
     for(let i = 0; i < str.length; i++){     // Recorremos el Array que introducimos en la función.
-        if(vowels.includes(str[i])){           // Si la variable que está definido que contiene las vocales no contiene  
+        if(vowels.includes(str[i])){         // Si la variable que está definido que contiene las vocales no contiene  
                                              //el elemento del string de la función que estamos recorriendo.
         }else{resultado += str[i]; }         // Entonces se suma y asigna a resultado el caracter que estamos
     }                                        //recorriendo, creando así nuestra cadena de caracteres.  
                                              //
-    return resultado;                        // Pedimos que nos devuelva el resultado de ese String.
+    console.log (resultado);                 // Pedimos que nos devuelva el resultado de ese String.
 }
 
-console.log(noVowels(sentence));             // Llamamos a la función con nuestra variable como argumento.
+noVowels(sentence);                           // Llamamos a la función con nuestra variable como argumento.
 
 /*
 
