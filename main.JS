@@ -35,18 +35,18 @@ EJERCICIO 2
 
 */
 
-let word = "palabrota";
+let word = "caverna";
                                                              // Declaramos una variable a la que asignamos como valor el numero total
 function middleCharacter(str){                               //de caracteres de la variable del argumento de la función dividido por 2
     let middleIndex = str.length / 2;                        //para encontrar el caracter del medio.
     if(str.length % 2 == 0){                                 // Si el cociente del número de caracteres entre 2 es igual a 0 es par.
-        return str.slice(middleIndex - 1, middleIndex + 1);  // Si es par regresa la selección del caracter anterior y el posterior al caracter de en medio.
+        console.log(str.slice(middleIndex - 1, middleIndex + 1));  // Si es par regresa la selección del caracter anterior y el posterior al caracter de en medio.
     } else{                                                  // Si es impar regresa el caracter de en medio.
-        return str.charAt(middleIndex);
+        console.log(str.charAt(middleIndex));
     }
 }
 
-console.log(middleCharacter(word));                          // Llamamos a la función con nuestra variable como argumento.
+middleCharacter(word);                          // Llamamos a la función con nuestra variable como argumento.
 
 /*
 
@@ -61,10 +61,10 @@ EJERCICIO 3
 let note = 'Hola Don Pepito, hola Don José';
 
 function deleteFirsLast(str){
-    return str.slice(1, -1);                   // Devuelve la selección del string que introducimos en la función quitando desde el primer caracter y quita hasta 
+  console.log(str.slice(1, -1));                   // Devuelve la selección del string que introducimos en la función quitando desde el primer caracter y quita hasta 
 }                                              //desde el primer caracter y quita hasta la posición del último caracter en orden inverso(hacia atrás).
 
-console.log(deleteFirsLast(note));             // Llamamos a la función con nuestra variable como argumento.
+deleteFirsLast(note);             // Llamamos a la función con nuestra variable como argumento.
 
 /*
 
@@ -81,10 +81,10 @@ function sumList(list){                       // Declaramos una variable con val
     for(let i = 0; i < list.length; i++){     // Recorremos los elementos del Array.
       suma += list[i];                        // Sumamos y asignamos a la variable que hemos creado para el sumatorio cada
     }                                         //uno de los elementos del Array.
-    return suma;                              // Regresa la variable del sumatorio de los elementos del Array.
+    console.log(suma);                              // Regresa la variable del sumatorio de los elementos del Array.
 }
 
-console.log(sumList(numberList));             // Llamamos a la función con nuestro Array como argumento.
+sumList(numberList);             // Llamamos a la función con nuestro Array como argumento.
 
 /*
 
@@ -109,11 +109,11 @@ function winner(list){
         winner = list[i];                 //el valor de la propiedad score de la variable, asignará a esta como valor el objeto
     }                                     //que se está recorriendo reescribiendo asi el objeto con el valor más alto en la  
   }                                       //propiedad score.
-  return winner.name;                     // Devuelve la propiedad nombre del objeto winner
+  console.log(winner.name);                     // Devuelve la propiedad nombre del objeto winner
 }
 
 
-console.log(winner(playerList));          // Llamamos a la función con nuestro Array de Objetos como argumento.
+winner(playerList);          // Llamamos a la función con nuestro Array de Objetos como argumento.
 
 /*
 
@@ -143,15 +143,17 @@ function counter(list1, list2){
     
     if(listSuma[i] === "o"){                // Si el elemento del Array que se está recorriendo es estrictamente igual a 'o' 
       nOvejas++;                            // entonces incrementa en uno la variable nOvejas que cuenta las ovejas.
-    } else{                                 // Si no incrementa en uno la variable nVacas que cuenta las vacas.
+    } else if(listSuma[i] === "v"){                                 // Si no incrementa en uno la variable nVacas que cuenta las vacas.
       nVacas++;
+    }else{
+      console.log('se te ha colado un bicho en el rebaño');
     }
   }
   let objetoRebaño ={nOvejas, nVacas};      // Declara la variable objeto a la que se le asigna como propiedades las variables 
                                             //de conteo que se han usado para contar ovejas y vacas respectivamente.
-  return objetoRebaño;                      // Devuelve las variable objeto que contiene el valor asignado 
+  console.log(objetoRebaño);                      // Devuelve las variable objeto que contiene el valor asignado 
 }                                           //por el número de vacas y ovejas que se han ido contando al 
                                             //recorrer el Array.
-console.log(counter(rebano1,rebano2));      // Llamamos a la función con nuestras variables Array como argumentos.
+counter(rebano1,rebano2);      // Llamamos a la función con nuestras variables Array como argumentos.
 
 
